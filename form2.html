@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      /* Ubah background utama menjadi gradient ungu indigo pekat */
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 620px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background-color: #f5f3ff; /* Ungu sangat muda */
+      padding: 24px;
+      text-align: center;
+      border-bottom: 1px solid #ede9fe;
+    }
+
+    .card-header h2 {
+      color: #4c1d95; /* Ungu gelap */
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .card-body {
+      padding: 28px 32px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #4338ca; /* Indigo medium */
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    label span {
+      color: #ef4444; /* Merah aksen untuk required */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #e0e7ff;
+      background-color: #f8fafc;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1e293b;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #6366f1;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+    }
+
+    .options-group {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .options-group label {
+      color: #334155;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: none;
+      letter-spacing: normal;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .options-group input[type="radio"],
+    .options-group input[type="checkbox"] {
+      accent-color: #6366f1; /* Warna pilihan radio/checkbox */
+      width: 16px;
+      height: 16px;
+    }
+
+    .range-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    input[type="range"] {
+      accent-color: #6366f1;
+      flex: 1;
+    }
+
+    .range-badge {
+      background-color: #6366f1; /* Indigo terang */
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .card-footer {
+      background-color: #f8fafc;
+      padding: 18px 32px;
+      text-align: right;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .btn-submit {
+      background-color: #4f46e5; /* Tombol Indigo */
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #4338ca;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 520px) {
+      .form-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      <h2>Create Account</h2>
+    </div>
+
+    <form action="#" method="POST">
+      <div class="card-body">
+        
+        <!-- Nama Depan & Belakang -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First name <span>*</span></label>
+            <input type="text" id="fname" placeholder="enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" placeholder="enter your last name">
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group full-width">
+          <label for="email">Email <span>*</span></label>
+          <input type="email" id="email" placeholder="enter your email" required>
+        </div>
+
+        <!-- Password & Konfirmasi -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="password">Password <span>*</span></label>
+            <input type="password" id="password" placeholder="enter your password" required>
+          </div>
+          <div class="form-group">
+            <label for="cpassword">Confirm Password <span>*</span></label>
+            <input type="password" id="cpassword" placeholder="enter your password again" required>
+          </div>
+        </div>
+
+        <!-- Gender & Hobbies -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Gender:</label>
+            <div class="options-group">
+              <label><input type="radio" name="gender" value="male"> Male</label>
+              <label><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Hobbies:</label>
+            <div class="options-group">
+              <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+              <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+              <label><input type="checkbox" name="hobbies" value="travel"> Travel</label>
+              <label><input type="checkbox" name="hobbies" value="movies"> Movies</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Source of Income & Income Range -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="source">Source of Income</label>
+            <select id="source">
+              <option value="employed">Employed</option>
+              <option value="self-employed">Self-Employed</option>
+              <option value="unemployed">Unemployed</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Income</label>
+            <div class="range-container">
+              <input type="range" min="0" max="100" value="20" id="incomeRange" oninput="updateIncome(this.value)">
+              <span class="range-badge" id="incomeVal">20K</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upload Foto & Umur -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="avatar">Upload Profile Picture</label>
+            <input type="file" id="avatar" accept="image/*">
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" value="18" min="1" max="120">
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="form-group full-width">
+          <label for="bio">Bio</label>
+          <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <button type="submit" class="btn-submit">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function updateIncome(val) {
+      document.getElementById('incomeVal').innerText = val + 'K';
+    }
+  </script>
+</body>
+</html>

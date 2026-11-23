@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LENSA STUDIO</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f6ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #1e40af;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .garis {
+            width: 80%;
+            height: 3px;
+            background-color: #2563eb;
+            margin: 20px auto;
+        }
+
+        main {
+            padding: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1e40af;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 250px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- FOTO LOGO -->
+        <img
+            src="assets/img/logo.jpg"
+            alt="Logo Lensa Studio"
+            class="logo"
+        >
+
+        <h1>LENSA STUDIO</h1>
+
+    </header>
+
+    <nav>
+        <a href="#">Galeri</a>
+        <a href="#">Tentang</a>
+        <a href="#">Layanan</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <main>
+
+        <h2>Koleksi Karya Terbaru</h2>
+
+        <p>
+            Kumpulan hasil jepretan dan berbagai sesi pemotretan
+        </p>
+
+        <div class="garis"></div>
+
+        <div class="container">
+
+            <!-- FOTO 1 -->
+            <div class="card">
+
+                <img
+                    src="assets/img/senja.jpg"
+                    alt="Foto Cahaya Senja"
+                >
+
+                <h3>POTRET</h3>
+
+                <p>
+                    Cahaya senja
+                </p>
+
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="card">
+
+                <img
+                    src="assets/img/jalan-malam.jpg"
+                    alt="Foto Jalanan Malam"
+                >
+
+                <h3>KOTA</h3>
+
+                <p>
+                    Jalanan malam
+                </p>
+
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="card">
+
+                <img
+                    src="assets/img/tepi-danau.jpg"
+                    alt="Foto Tepi Danau"
+                >
+
+                <h3>ALAM</h3>
+
+                <p>
+                    Tepi danau
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Belajar HTML & CSS. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

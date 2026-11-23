@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      background-color: #f4f4f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* KOTAK UTAMA (FORM CONTAINER) */
+    .form-card {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 700px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e0e0e0;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #333333;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px 5px;
+      vertical-align: middle;
+      color: #444444;
+      font-size: 14px;
+    }
+
+    td:first-child {
+      font-weight: bold;
+      width: 25%;
+    }
+
+    /* Styling Elemen Input & Select */
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #4a90e2;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    /* Styling Tombol Register */
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- KOTAK FORM -->
+  <div class="form-card">
+    <h1>Student Registration Form</h1>
+
+    <form>
+      <table>
+        <tr>
+          <td>Roll no. :</td>
+          <td><input type="text" class="full-width" /></td>
+        </tr>
+
+        <tr>
+          <td>Student name :</td>
+          <td>
+            <input type="text" style="width: 47%;" placeholder="First Name" />
+            -
+            <input type="text" style="width: 47%;" placeholder="Last Name" />
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Father's name :</td>
+          <td><input type="text" class="full-width" /></td>
+        </tr>
+        
+        <tr>
+          <td>Date of birth :</td>
+          <td>
+            <input type="text" size="4" placeholder="Day" /> -
+            <input type="text" size="4" placeholder="Month" /> -
+            <input type="text" size="8" placeholder="Year" /> 
+            <i style="color: #666; font-size: 12px;">(DD-MM-YYYY)</i>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Mobile no. :</td>
+          <td>
+            <input type="text" size="3" value="+91" /> -
+            <input type="text" style="width: 80%;" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Email id :</td>
+          <td><input type="text" class="full-width" /></td>
+        </tr>
+        
+        <tr>
+          <td>Password :</td>
+          <td><input type="password" class="full-width" /></td>
+        </tr>
+        
+        <tr>
+          <td>Gender :</td>
+          <td>
+            <label><input type="radio" name="g" /> Male</label> &nbsp;
+            <label><input type="radio" name="g" /> Female</label>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Department :</td>
+          <td>
+            <label><input type="checkbox" /> CSE</label>
+            <label><input type="checkbox" /> IT</label>
+            <label><input type="checkbox" /> ECE</label>
+            <label><input type="checkbox" /> Civil</label>
+            <label><input type="checkbox" /> Mech</label>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Course :</td>
+          <td>
+            <select class="full-width">
+              <option value="">-- Select Current Course --</option>
+              <option value="Python">Python</option>
+              <option value="Node">Node</option>
+              <option value="Java">Java</option>
+              <option value="React">React</option>
+              <option value="PHP">PHP</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>Student photo :</td>
+          <td><input type="file" /></td>
+        </tr>
+        
+        <tr>
+          <td>City :</td>
+          <td><input type="text" class="full-width" /></td>
+        </tr>
+        
+        <tr>
+          <td>Address :</td>
+          <td><textarea class="full-width" rows="4"></textarea></td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" align="center" style="padding-top: 20px;">
+            <input type="submit" value="Register" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
+</body>
+</html>
